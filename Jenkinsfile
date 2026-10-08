@@ -7,6 +7,7 @@ pipeline {
         OPENSHIFT_NAMESPACE = 'devops-pipeline'
         GIT_REPO_URL = 'https://github.com/jondee/jenkins-openshift-pipeline.git'
         DEPLOYMENT_YAML_PATH = 'deployment.yml'
+        PATH = "/var/jenkins_home/bin:${env.PATH}"
     }
     
     stages {
