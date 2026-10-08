@@ -2,10 +2,10 @@ pipeline {
     agent any
     
     environment {
-        OPENSHIFT_SERVER = 'https://api.ocp4.example.com:6443'
-        OPENSHIFT_TOKEN = credentials('jenkins-openshift-token')
-        OPENSHIFT_NAMESPACE = 'devops'
-        GIT_REPO_URL = 'https://github.com/arytmw/jenkins-openshift-pipeline.git'
+        OPENSHIFT_SERVER = 'https://api.cluster03.localhost.com:6443'
+        OPENSHIFT_TOKEN = credentials('openshift-service-account-token')
+        OPENSHIFT_NAMESPACE = 'devops-pipeline'
+        GIT_REPO_URL = 'https://github.com/jondee/jenkins-openshift-pipeline.git'
         DEPLOYMENT_YAML_PATH = 'deployment.yml'
     }
     
